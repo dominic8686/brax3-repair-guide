@@ -1,0 +1,37 @@
+# Publish only the application, its runtime assets, and conversion utilities.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/THIRD_PARTY_NOTICES.md
+!/package.json
+!/vercel.json
+!/scripts/
+!/viewer/
+!/model/
+
+/model/*
+!/model/e11-components.glb
+!/model/e11-components.json
+!/model/e11-5g-assembly.glb
+!/model/export-components.py
+!/model/convert-preview.py
+
+/viewer/*.png
+/viewer/*.log
+**/.env*
+**/.vercel/
+**/node_modules/
+**/__pycache__/
+*.pyc
+
+# Manufacturer source archives, native scenes, reports, and other products stay local.
+*.7z
+*.zip
+*.stp
+*.step
+*.bip
+*.ksp
+*.blend
+*.psd
+*.pdf

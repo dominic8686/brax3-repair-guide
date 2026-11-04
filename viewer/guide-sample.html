@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brax3 · Repair guide preview</title>
+  <link rel="stylesheet" href="/guide-sample.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.min.js"}}</script>
+</head>
+<body>
+  <header><a class="wordmark" href="/">Brax3 <span>REPAIR LAB</span></a><a class="back-link" href="/" target="_blank" rel="noopener">Open assembly explorer ↗</a></header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">BATTERY REPLACEMENT / DESIGN PREVIEW</p><h1>A guide you can turn around.</h1><p>One step, illustrated with the actual Brax3 CAD model.</p></div><span class="preview-tag">SINGLE-STEP PREVIEW</span></div>
+    <div class="reference-note"><span class="note-symbol">i</span><p><strong>Brax3 visual mockup.</strong> Instructions follow the Nothing Phone (2a) reference. Attachment points, tools, and removal paths are not verified for the Brax3.</p></div>
+    <article class="step-card">
+      <section class="visual-column" aria-label="3D illustration of back panel removal">
+        <div class="render-area">
+          <div id="guide-canvas"></div>
+          <div class="render-heading"><span class="live-dot"></span> INTERACTIVE 3D <span class="model-tag">Brax3 CAD</span></div>
+          <div id="guide-loading" role="status">Loading the Brax3 model…</div>
+          <div id="cover-label" class="annotation">Rear cover <span>Highlighted component</span></div>
+          <div id="body-label" class="annotation secondary">Phone body <span>Other components stay assembled</span></div>
+          <div class="render-tools"><button id="guide-angle" disabled>Reset camera</button><button id="guide-labels" aria-pressed="true" disabled>Labels on</button></div>
+          <p class="gesture-hint">Drag to rotate · Scroll to zoom</p>
+        </div>
+        <div class="visual-states" role="group" aria-label="Illustration states">
+          <button data-pose="0" aria-pressed="false" disabled><span>01</span><strong>Before removal</strong><small>Cover in place</small></button>
+          <button data-pose="0.5" aria-pressed="true" disabled><span>02</span><strong>Lift the cover</strong><small>See the separation</small></button>
+          <button data-pose="1" aria-pressed="false" disabled><span>03</span><strong>Cover removed</strong><small>Inspect underneath</small></button>
+        </div>
+        <div class="animation-controls"><button id="guide-play" class="play-button" disabled>▶ Play this step</button><label for="guide-progress" class="sr-only">Cover removal progress</label><input id="guide-progress" type="range" min="0" max="1000" value="500" aria-valuetext="Cover halfway lifted" disabled><output id="guide-percent" for="guide-progress">50%</output></div>
+      </section>
+      <section class="instructions">
+        <div class="step-heading"><span class="step-number">02</span><span>REFERENCE STEP 2</span></div>
+        <h2>Remove the<br>back panel</h2><p class="step-intro">Release the perimeter, then lift the cover clear.</p>
+        <div class="instruction"><span class="bullet">1</span><div><h3>Separate the edges</h3><p>Use a Jimmy or opening picks to work the rear panel away from the phone body around its edges.</p></div></div>
+        <div class="instruction"><span class="bullet">2</span><div><h3>Lift off the panel</h3><p>Gently lift the loosened panel away. A suction cup can help with this part.</p></div></div>
+        <div class="tools"><h3>Tools in the reference</h3><p>Opening picks or Jimmy</p><p class="optional">Optional: suction cup</p></div>
+        <div class="visual-note"><strong>What this render shows</strong><p>Only the rear-cover mesh moves. The rest of the Brax3 stays in its CAD position. This illustrates lifting a released cover, not how to release its clips or adhesive.</p></div>
+        <div class="source"><span>Adapted from Benjamin Hockings and contributors</span><a href="https://www.ifixit.com/Guide/Nothing+Phone+(2a)+Battery+Replacement/181497" target="_blank" rel="noopener">iFixit · Nothing Phone (2a), Step 2 ↗</a></div>
+      </section>
+    </article>
+    <div class="guide-bottom"><span id="guide-status" role="status">Preparing the step illustration</span><span>One sample step · remaining steps not built</span></div>
+  </main>
+  <script type="module" src="/guide-sample.js"></script>
+</body>
+</html>

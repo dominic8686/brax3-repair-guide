@@ -1,0 +1,13 @@
+{
+  "name": "brax3-repair-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Brax3 interactive assembly explorer and visual battery-repair draft",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node viewer/server.mjs",
+    "test": "node viewer/guide-check.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

@@ -1,0 +1,757 @@
+{
+  "product": "Brax3",
+  "version": 2,
+  "status": "Service draft \u2014 hardware verification required",
+  "sourceAssets": "BraX3 Keyshot 3D model.7z",
+  "tools": [
+    {
+      "name": "Precision screwdriver \u2014 match the screw head",
+      "image": "/guide-assets/tool-0.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/phillips-00-screwdriver"
+    },
+    {
+      "name": "T5 Torx Screwdriver",
+      "image": "/guide-assets/tool-1.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/t5-torx-screwdriver"
+    },
+    {
+      "name": "Hair Dryer",
+      "image": "/guide-assets/tool-2.jpg",
+      "url": "https://smile.amazon.com/Hair-Dryers/b/ref=dp_bc_aui_C_5?ie=UTF8&node=11058141"
+    },
+    {
+      "name": "Heat Gun",
+      "image": "/guide-assets/tool-3.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/heat-gun"
+    },
+    {
+      "name": "Tweezers",
+      "image": "/guide-assets/tool-4.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/tweezers"
+    },
+    {
+      "name": "Spudger",
+      "image": "/guide-assets/tool-5.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/spudger"
+    },
+    {
+      "name": "iFixit Opening Picks (Set of 6)",
+      "image": "/guide-assets/tool-6.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/ifixit-opening-picks-set-of-6"
+    },
+    {
+      "name": "Suction Handle",
+      "image": "/guide-assets/tool-7.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/suction-handle"
+    },
+    {
+      "name": "FixMat",
+      "image": "/guide-assets/tool-8.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/fixmat"
+    },
+    {
+      "name": "Jimmy",
+      "image": "/guide-assets/tool-9.jpg",
+      "url": "https://www.ifixit.com/en-eu/products/jimmy"
+    },
+    {
+      "name": "Microfibre cloth",
+      "image": "/guide-assets/tool-10.jpg"
+    }
+  ],
+  "steps": [
+    {
+      "number": 1,
+      "id": "prepare",
+      "title": "Prepare the Brax3",
+      "chapter": "PREPARATION",
+      "instructions": [
+        "Back up the phone, shut it down, and disconnect the charger.",
+        "Place the phone screen-down on a clean, soft surface. Keep a location map for removed parts and screws."
+      ],
+      "stage": {
+        "target": "phone",
+        "action": "inspect",
+        "tools": [],
+        "label": "Prepare the Brax3",
+        "after": {},
+        "note": "",
+        "distance": 0.02,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "id": "warm-back",
+      "title": "Soften the rear-cover adhesive",
+      "chapter": "OPENING",
+      "instructions": [
+        "Warm the rear perimeter gradually to soften the cover adhesive.",
+        "Keep the heat moving. Use the Brax3 service temperature and duration when available; do not concentrate heat over the battery."
+      ],
+      "stage": {
+        "target": "cover",
+        "action": "heat",
+        "tools": [
+          2
+        ],
+        "label": "Soften the rear-cover adhesive",
+        "after": {},
+        "note": "",
+        "distance": 0.02,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "id": "open-seam",
+      "title": "Open the rear-cover seam",
+      "chapter": "OPENING",
+      "instructions": [
+        "Use a suction handle to create a small gap at the rear-cover edge.",
+        "Slide a shallow plastic opening pick along the adhesive seam. Rewarm any area that resists."
+      ],
+      "stage": {
+        "target": "cover",
+        "action": "pry",
+        "tools": [
+          7,
+          6
+        ],
+        "label": "Open the rear-cover seam",
+        "after": {},
+        "note": "",
+        "distance": 0.003,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "id": "lift-cover",
+      "title": "Lift off the rear cover",
+      "chapter": "OPENING",
+      "instructions": [
+        "Once the perimeter adhesive is released, lift the cover clear of the frame.",
+        "Set the cover on a soft surface. The NFC assembly remains inside the phone."
+      ],
+      "stage": {
+        "target": "cover",
+        "action": "lift",
+        "tools": [
+          7
+        ],
+        "label": "Lift off the rear cover",
+        "after": {
+          "cover": 1
+        },
+        "note": "",
+        "distance": 0.047,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "id": "remove-fasteners",
+      "title": "Record and remove the carrier screws",
+      "chapter": "DISASSEMBLY",
+      "instructions": [
+        "Identify the screws retaining the inner carrier on your Brax3. Match the driver to each actual screw head.",
+        "Record each screw location and length before removal. Keep different lengths separate."
+      ],
+      "stage": {
+        "target": "screws",
+        "action": "unscrew",
+        "tools": [
+          0,
+          8
+        ],
+        "label": "Record and remove the carrier screws",
+        "after": {
+          "screws": 1
+        },
+        "note": "The archive does not establish the complete screw count, lengths or bit size. The markers are illustrative; use a verified Brax3 screw map.",
+        "distance": 0.014,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "id": "lift-carrier",
+      "title": "Release the inner carrier",
+      "chapter": "DISASSEMBLY",
+      "instructions": [
+        "Release the inner-carrier clips gently and inspect beneath the edge as it lifts.",
+        "The Brax3 artwork identifies an NFC assembly. Check its actual contact or flex arrangement before moving the carrier clear; do not pull on a connected flex."
+      ],
+      "stage": {
+        "target": "carrier",
+        "action": "lift",
+        "tools": [
+          5
+        ],
+        "label": "Release the inner carrier",
+        "after": {
+          "carrier": 1
+        },
+        "note": "Carrier motion is reconstructed from the Brax3 render and teardown photos. Its exact release points and NFC connection need confirmation on the device.",
+        "distance": 0.038,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "id": "disconnect-battery",
+      "title": "Disconnect the battery",
+      "chapter": "DISASSEMBLY",
+      "instructions": [
+        "Locate and confirm the battery connector on the exposed mainboard.",
+        "Use a plastic spudger to lift the connector from its socket. Keep it disconnected while handling the battery."
+      ],
+      "stage": {
+        "target": "batteryFlex",
+        "action": "disconnect",
+        "tools": [
+          5
+        ],
+        "label": "Disconnect the battery",
+        "after": {
+          "batteryFlex": 1
+        },
+        "note": "The connector position is a schematic locator, not a measured position from the KeyShot scene.",
+        "distance": 0.009,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "id": "release-adhesive",
+      "title": "Release the battery adhesive",
+      "chapter": "BATTERY REPLACEMENT",
+      "instructions": [
+        "Inspect the adhesive and release tabs fitted to this battery.",
+        "Release the adhesive using the method specified for the Brax3 pack. Stop if the pack resists; do not lever or bend the cell."
+      ],
+      "stage": {
+        "target": "tabs",
+        "action": "peel",
+        "tools": [],
+        "label": "Release the battery adhesive",
+        "after": {
+          "tabs": 1
+        },
+        "note": "The archive does not verify an adhesive-tab order. No numbered sequence from another handset is assumed.",
+        "distance": 0.017,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "id": "remove-battery",
+      "title": "Lift out the battery",
+      "chapter": "BATTERY REPLACEMENT",
+      "instructions": [
+        "When all retaining adhesive is released, lift the battery evenly from its recess.",
+        "Keep the cell flat and avoid snagging the connector or cables beneath it."
+      ],
+      "stage": {
+        "target": "battery",
+        "action": "lift",
+        "tools": [],
+        "label": "Lift out the battery",
+        "after": {
+          "battery": 1
+        },
+        "note": "",
+        "distance": 0.035,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 10,
+      "id": "fit-battery",
+      "title": "Fit the replacement battery",
+      "chapter": "BATTERY REPLACEMENT",
+      "instructions": [
+        "Use the specified Brax3 replacement battery and fresh, compatible battery adhesive.",
+        "Route the flex without folds and seat the pack flat in its recess. The label shown is the artwork supplied with the KeyShot model."
+      ],
+      "stage": {
+        "target": "battery",
+        "action": "insert",
+        "tools": [],
+        "label": "Fit the replacement battery",
+        "after": {
+          "battery": 0,
+          "tabs": 0
+        },
+        "note": "",
+        "distance": 0.035,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 11,
+      "id": "reconnect-battery",
+      "title": "Reconnect the battery",
+      "chapter": "REASSEMBLY",
+      "instructions": [
+        "Check the connector and socket for damage or debris.",
+        "Align the battery connector carefully and press it into place without forcing it."
+      ],
+      "stage": {
+        "target": "batteryFlex",
+        "action": "connect",
+        "tools": [],
+        "label": "Reconnect the battery",
+        "after": {
+          "batteryFlex": 0
+        },
+        "note": "",
+        "distance": 0.009,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 12,
+      "id": "refit-carrier",
+      "title": "Refit the inner carrier",
+      "chapter": "REASSEMBLY",
+      "instructions": [
+        "Restore any NFC contacts or flex connections disturbed during removal, following the verified Brax3 arrangement.",
+        "Align the carrier and seat the clips gently. Check that no cable is trapped."
+      ],
+      "stage": {
+        "target": "carrier",
+        "action": "insert",
+        "tools": [],
+        "label": "Refit the inner carrier",
+        "after": {
+          "carrier": 0
+        },
+        "note": "",
+        "distance": 0.038,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 13,
+      "id": "refit-fasteners",
+      "title": "Return the original screws",
+      "chapter": "REASSEMBLY",
+      "instructions": [
+        "Return every screw to its recorded location using the matching bit.",
+        "Use the specified service torque. Do not substitute a longer screw or overtighten."
+      ],
+      "stage": {
+        "target": "screws",
+        "action": "screw",
+        "tools": [
+          0,
+          8
+        ],
+        "label": "Return the original screws",
+        "after": {
+          "screws": 0
+        },
+        "note": "",
+        "distance": 0.014,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 14,
+      "id": "test-phone",
+      "title": "Test before sealing",
+      "chapter": "REASSEMBLY",
+      "instructions": [
+        "Check that the phone starts and recognizes the battery. Test charging, cameras, buttons and NFC.",
+        "Shut the phone down and disconnect power again before applying the rear-cover adhesive."
+      ],
+      "stage": {
+        "target": "phone",
+        "action": "inspect",
+        "tools": [],
+        "label": "Test before sealing",
+        "after": {},
+        "note": "",
+        "distance": 0.02,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 15,
+      "id": "clean-seam",
+      "title": "Clean the bonding surfaces",
+      "chapter": "SEALING",
+      "instructions": [
+        "Remove old adhesive from the frame and rear-cover bonding surfaces without scratching them.",
+        "Clean the bonding areas with the adhesive supplier\u2019s compatible method and allow them to dry."
+      ],
+      "stage": {
+        "target": "seam",
+        "action": "wipe",
+        "tools": [
+          10,
+          5
+        ],
+        "label": "Clean the bonding surfaces",
+        "after": {},
+        "note": "",
+        "distance": 0.02,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 16,
+      "id": "renew-adhesive",
+      "title": "Apply new rear-cover adhesive",
+      "chapter": "SEALING",
+      "instructions": [
+        "Fit the specified Brax3 rear-cover adhesive to the clean perimeter.",
+        "Keep openings and contacts clear. Remove the release liner only when ready to close the phone."
+      ],
+      "stage": {
+        "target": "seam",
+        "action": "adhesive",
+        "tools": [],
+        "label": "Apply new rear-cover adhesive",
+        "after": {},
+        "note": "",
+        "distance": 0.02,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 17,
+      "id": "close-cover",
+      "title": "Reseat the rear cover",
+      "chapter": "SEALING",
+      "instructions": [
+        "Align the camera opening and the cover edges before lowering the cover.",
+        "Press around the perimeter evenly and inspect for gaps or trapped parts."
+      ],
+      "stage": {
+        "target": "cover",
+        "action": "insert",
+        "tools": [],
+        "label": "Reseat the rear cover",
+        "after": {
+          "cover": 0
+        },
+        "note": "",
+        "distance": 0.047,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    },
+    {
+      "number": 18,
+      "id": "finish",
+      "title": "Let the adhesive bond",
+      "chapter": "FINISH",
+      "instructions": [
+        "Protect the rear cover with a clean cloth and apply the pressure specified by the adhesive manufacturer.",
+        "Observe the specified bonding time before handling. Reassembly alone does not confirm water resistance."
+      ],
+      "stage": {
+        "target": "cover",
+        "action": "press",
+        "tools": [
+          10
+        ],
+        "label": "Let the adhesive bond",
+        "after": {},
+        "note": "",
+        "distance": 0.02,
+        "frames": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            25,
+            0.82,
+            1
+          ],
+          [
+            0,
+            0.95,
+            0.66
+          ]
+        ]
+      }
+    }
+  ]
+}

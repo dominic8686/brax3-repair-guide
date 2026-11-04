@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brax3 assembly — 3D viewer</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #10141b; color: #edf0f5; font: 15px system-ui, sans-serif; }
+    main { height: 100dvh; display: flex; flex-direction: column; }
+    header { padding: 20px 24px; border-bottom: 1px solid #303743; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    h1 { font-size: 21px; margin: 0 0 5px; }
+    p { margin: 0; color: #aeb9ca; font-size: 13px; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    button, a { color: #edf0f5; background: #202733; border: 1px solid #485366; border-radius: 6px; padding: 9px 12px; font: inherit; text-decoration: none; cursor: pointer; }
+    button:hover, a:hover { background: #354052; }
+    button:focus-visible, a:focus-visible { outline: 2px solid #ef8b66; outline-offset: 3px; }
+    model-viewer { width: 100%; flex: 1; min-height: 260px; background: radial-gradient(ellipse at center, #293241, #10141b 75%); }
+    footer { padding: 12px 24px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; border-top: 1px solid #303743; }
+    #status { color: #b9dccc; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div><h1>Brax3 assembly</h1><p>000_Brax35S3_all_asm.stp · Geometry preview · Neutral material</p></div>
+      <nav aria-label="Model controls">
+        <button id="rotate" aria-pressed="false">Auto-rotate</button>
+        <button id="reset">Reset view</button>
+        <button id="background" aria-pressed="false">Light background</button>
+        <a href="/assembly.glb" download="e11-5g-assembly.glb">Download GLB</a>
+      </nav>
+    </header>
+    <model-viewer id="model" src="/assembly.glb" alt="Brax3 phone assembly" camera-controls loading="eager" reveal="auto" shadow-intensity="0.6" exposure="1.1" environment-image="neutral" camera-orbit="35deg 75deg auto" touch-action="none"></model-viewer>
+    <footer><p>Drag to orbit · Scroll or pinch to zoom · Right-drag to pan</p><p id="status" role="status">Loading assembly…</p></footer>
+  </main>
+  <script>
+    const model = document.querySelector('#model');
+    const status = document.querySelector('#status');
+    model.addEventListener('load', () => { status.textContent = 'Assembly ready'; });
+    model.addEventListener('error', () => { status.textContent = 'Unable to load assembly. Check the local server and GLB file.'; });
+    document.querySelector('#rotate').onclick = (event) => {
+      const enabled = model.toggleAttribute('auto-rotate');
+      event.currentTarget.setAttribute('aria-pressed', String(enabled));
+      event.currentTarget.textContent = enabled ? 'Stop rotation' : 'Auto-rotate';
+    };
+    document.querySelector('#reset').onclick = () => {
+      model.cameraOrbit = '35deg 75deg auto';
+      model.cameraTarget = 'auto auto auto';
+      model.fieldOfView = 'auto';
+      model.resetTurntableRotation();
+    };
+    document.querySelector('#background').onclick = (event) => {
+      const light = event.currentTarget.getAttribute('aria-pressed') !== 'true';
+      model.style.background = light ? '#e6e9ef' : '';
+      event.currentTarget.setAttribute('aria-pressed', String(light));
+      event.currentTarget.textContent = light ? 'Dark background' : 'Light background';
+    };
+  </script>
+  <script type="module" src="/model-viewer.min.js"></script>
+</body>
+</html>

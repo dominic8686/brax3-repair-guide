@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brax3 · Interactive teardown</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.min.js"}}</script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><span class="brand-mark">Brax3</span><div><h1>Interactive teardown</h1><p>5G handset · Assembly explorer</p></div></div>
+    <div class="header-actions"><span id="model-summary" class="muted">Preparing model</span><a href="/components.glb" download="e11-components.glb">Download CAD geometry <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main class="workspace">
+    <section class="explorer" aria-label="Interactive 3D viewer">
+      <div class="stage">
+        <div class="stage-caption"><span class="eyebrow">ASSEMBLY STUDY / 001</span><h2 id="pose-label">Assembled</h2><p id="pose-note">All components in their CAD positions.</p></div>
+        <div id="canvas-host"></div>
+        <div id="loading" class="loading" role="status"><span class="loading-line"></span><strong id="load-label">Loading component geometry…</strong><button id="retry" hidden>Retry</button></div>
+        <div class="view-controls" aria-label="Camera views"><button data-view="iso" title="Isometric view">3D</button><button data-view="front">Front</button><button data-view="rear">Rear</button><button data-view="side">Side</button><button id="fit" title="Fit visible components">Fit view</button><button id="material-mode" aria-pressed="true" title="Switch between photo-based finishes and available original CAD colors" disabled>Photo finish</button></div>
+        <div class="stage-hint">Drag to orbit <span>·</span> Scroll to zoom <span>·</span> Click a part to inspect</div>
+      </div>
+      <section class="transport" aria-label="Teardown playback">
+        <div class="timeline-heading"><label for="progress">Assembly progress</label><output id="progress-value" for="progress">0%</output></div>
+        <input id="progress" type="range" min="0" max="1000" value="0" step="1" aria-valuetext="Fully assembled" disabled>
+        <div class="timeline-ticks"><span>Assembled</span><span>Separate layers</span><span>Exploded</span></div>
+        <div class="playback-controls">
+          <div class="button-group"><button id="play" class="primary" disabled>▶ Play teardown</button><button id="assemble" disabled>↶ Reassemble</button></div>
+          <div class="playback-options"><label for="speed">Speed</label><select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select><label class="checkbox"><input id="loop" type="checkbox"> Loop</label><button id="reset" disabled>Reset</button></div>
+        </div>
+      </section>
+    </section>
+    <aside class="parts-panel" aria-label="Components">
+      <div class="panel-heading"><h2>Components <span id="part-count">—</span></h2><button id="show-all" disabled>Show all</button></div>
+      <div class="filters"><label for="search" class="sr-only">Search component names</label><input id="search" type="search" placeholder="Search CAD names or parts…"><label for="group" class="sr-only">Filter component group</label><select id="group"><option value="">All groups</option></select></div>
+      <div class="list-heading"><span>PART / CAD NAME</span><span id="list-count"></span></div>
+      <div id="part-list" class="part-list" role="group" aria-label="Select a component"><p class="empty">Components will appear here.</p></div>
+      <section class="inspection" aria-label="Selected component">
+        <p class="eyebrow">INSPECT COMPONENT</p><h3 id="part-title">Explore the assembly</h3>
+        <p id="part-cad" class="cad-name">Select a part in the model or the list.</p>
+        <dl id="part-meta" hidden><div><dt>Group</dt><dd id="part-group"></dd></div><div><dt>Dimensions</dt><dd id="part-size"></dd></div></dl>
+        <div class="inspection-actions"><button id="focus" disabled>Focus</button><button id="isolate" disabled aria-pressed="false">Isolate</button><button id="hide" disabled>Hide</button></div>
+      </section>
+      <p class="model-note">Rear appearance uses a Brax3 certification photo, not factory texture maps. It fades as the cover separates because the photo includes visible internals. Other finishes are approximations; CAD colors restores available source colors. Separation paths are illustrative.</p>
+    </aside>
+  </main>
+  <footer class="footer"><p id="status" role="status">Loading Brax3 assembly</p><span>LOCAL CAD PREVIEW <span class="status-dot" aria-hidden="true"></span></span></footer>
+  <noscript>This interactive viewer requires JavaScript.</noscript>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
